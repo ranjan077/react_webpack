@@ -1,3 +1,4 @@
+import "./syles/index.scss"
 const fName = {
     firstName: 'Ranjan',
     
