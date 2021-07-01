@@ -1,5 +1,15 @@
-const test = {
-    name: 'ranjan'
+const fName = {
+    firstName: 'Ranjan',
+    
 };
 
-console.log(test);
+const lName = {
+    lastName: 'Naragaju'
+}
+
+const fullName = {
+    ...fName,
+    ...lName
+}
+
+console.log(fullName);
