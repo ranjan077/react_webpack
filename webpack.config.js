@@ -5,6 +5,9 @@ if(process.env.NODE_ENV === 'production') {
 }
 module.exports = {
     mode,
+    output: {
+        assetModuleFilename: 'images/[hash][ext][query]'
+    },
     module: {
         rules: [{
             test: /\.jsx?$/,
@@ -15,7 +18,14 @@ module.exports = {
         },
         {
             test: /\.s?css/,
-            use: [MiniCSSextractPlugin.loader, 'css-loader', 'sass-loader']
+            use: [{
+                loader: MiniCSSextractPlugin.loader,
+                options: {publicPath: ''}
+            }, 'css-loader', 'sass-loader']
+        },
+        {
+            test: /\.(png|jpe?g|gif|svg)$/i,
+            type: "asset/resource"
         }]
     },
     resolve: {
