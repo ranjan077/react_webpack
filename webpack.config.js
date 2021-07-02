@@ -7,7 +7,7 @@ module.exports = {
     mode,
     module: {
         rules: [{
-            test: /\.js$/,
+            test: /\.jsx?$/,
             exclude: /node_modules/,
             use: {
                 loader: 'babel-loader'
@@ -17,6 +17,9 @@ module.exports = {
             test: /\.s?css/,
             use: [MiniCSSextractPlugin.loader, 'css-loader', 'sass-loader']
         }]
+    },
+    resolve: {
+        extensions: ['.js', '.jsx']
     },
     plugins: [new MiniCSSextractPlugin()],
     devtool: mode === 'development' ? 'source-map' : false,

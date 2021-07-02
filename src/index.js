@@ -1,16 +1,5 @@
-import "./syles/index.scss"
-const fName = {
-    firstName: 'Ranjan',
-    
-};
+import React from 'react';
+import ReactDOM  from 'react-dom';
+import App from './components/App'
 
-const lName = {
-    lastName: 'Naragaju'
-}
-
-const fullName = {
-    ...fName,
-    ...lName
-}
-
-console.log(fullName);
+ReactDOM.render(<App/>, document.getElementById('app'));
