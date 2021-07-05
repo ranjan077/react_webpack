@@ -4,7 +4,7 @@ import  butter from '../images/butter.png'
 
 const App  = () => {
     return <div class="main">
-        <img src={butter} alt="butter" className="butter"/>
+        
     </div>
 }
 
